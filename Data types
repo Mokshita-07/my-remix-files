@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract SimpleStorage {
+    uint256 favoriteNumber = 7;
+    bool favoriteBool = true;
+    string favoriteString = "Hello";
+    int256 favoriteInteger = -7;
+    address favoriteAddress = 0x50e3FcEe37fce85523B4CFc1df99dD4ce210Ba6C;
+    bytes32 favouriteByte = "Dog";
+}
