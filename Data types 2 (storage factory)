@@ -13,6 +13,8 @@ contract SimpleStorage {
 
 
 
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.30;
 
@@ -25,4 +27,15 @@ contract StorageFactory {
         SimpleStorage simpleStorage = new SimpleStorage();
         simpleStorageArray.push(simpleStorage);
     }
+
+    function storeNumberInContract(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
+        SimpleStorage simpleStorage = SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
+        simpleStorage.store(_simpleStorageNumber);
+    }
+
+  function sfGet(uint256 _simpleStorageIndex) public view returns (uint256) {
+        SimpleStorage simpleStorage = SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
+        return simpleStorage.retrieve();
+    }
+
 }
