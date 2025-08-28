@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity^0.8.30;
+
+contract SimpleVoting {
+    uint public optionAVotes;
+    uint public optionBVotes;
+
+    function voteForOptionA() public {
+        optionAVotes++;
+    }
+
+function voteForOptionB() public {
+    optionBVotes++;
+}
+
+function getOptionAVotes() public view returns (uint) {
+    return optionBVotes;
+}
+
+}
